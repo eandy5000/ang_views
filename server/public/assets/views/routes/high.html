@@ -1,0 +1,31 @@
+<div class="container" ng-controller="ThirdController">
+
+    <div class="col-md-12 well-lg">
+        <h1>High Scores</h1>
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+        <h2>Games Played</h2>
+        <div ng-repeat="player in players | orderBy: '-games' | limitTo: 7" class="well">
+            <h3>{{player.Name}}</h3>
+            <p>{{player.games}}</p>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+        <h2>Wins</h2>
+        <div ng-repeat="player in players | orderBy: '-wins' | limitTo: 7" class="well">
+            <h3>{{player.Name}}</h3>
+            <p>{{player.wins}}</p>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+        <h2>Winning Streak</h2>
+        <div ng-repeat="player in players | orderBy: '-streak' | limitTo: 7" class="well">
+            <h3>{{player.Name}}</h3>
+            <p>{{player.streak}}</p>
+        </div>
+    </div>
+
+</div>

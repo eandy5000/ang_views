@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/assets/styles/styles.css"/>
+
     <script src="/vendors/angular.min.js"></script>
     <script src="/vendors/angular-route.min.js"></script>
     <script src="/assets/scripts/app.js"></script>
 </head>
 <body>
+
     <div ng-include=" '/assets/views/templates/nav.html' "></div>
+    <div ng-include=" '/assets/views/templates/header.html' "></div>
     <main ng-view></main>
+
+
 </body>
 </html>
